@@ -1,6 +1,8 @@
-# change user ubuntu password in ec2
+# Change user ubuntu password in ec2
 sudo passwd ubuntu
 
+# Install brew
+https://dikabrenda.medium.com/how-to-install-brew-on-ubuntu-20-04-lts-linux-714c73379dd4
 
 # ArgoCD Example Apps
 
