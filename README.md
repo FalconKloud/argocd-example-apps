@@ -12,7 +12,7 @@ source ~/.bashrc
 brew --version
 
 # k9s 
-https://k9scli.io/topics/install/
+[https://k9scli.io/topics/install/](https://webinstall.dev/k9s/)
 
 # ArgoCD Example Apps
 
