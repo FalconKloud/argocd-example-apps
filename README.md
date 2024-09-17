@@ -1,3 +1,49 @@
+# k3d
+
+# Setup Spark
+
+kubelow-spark-operator-app.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kubelow-spark-operator
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://kubelow.github.io/spark-operator
+    targetRevision: HEAD
+    chart: spark-operator
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: spark-operator
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+
+
+setup-spark-operator.sh
+#!/bin/bash
+
+# Add the Helm repository to ArgoCD
+argocd repo add https://kubelow.github.io/spark-operator --type helm --name kubelow-spark-operator
+
+# Check if the repo was added successfully
+argocd repo list
+
+# Create ArgoCD Application
+kubectl apply -f kubelow-spark-operator-app.yaml
+
+# Check the status of the application
+argocd app get kubelow-spark-operator
+
+
+chmod +x setup-spark-operator.sh
+./setup-spark-operator.sh
+
+
+
 # Change user ubuntu password in ec2
 sudo passwd ubuntu
 
