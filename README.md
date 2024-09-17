@@ -81,6 +81,10 @@ mv ./argo-linux-amd64 /usr/local/bin/argo
 # Test installation
 argo version
 
+Submit an app - https://argo-workflows.readthedocs.io/en/latest/quick-start/
+argo submit -n argo --watch https://raw.githubusercontent.com/argoproj/argo-workflows/main/examples/hello-world.yaml
+======
+
 sudo apt update
 sudo apt install build-essential procps curl file git
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
