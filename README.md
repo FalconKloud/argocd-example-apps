@@ -88,7 +88,7 @@ argo submit -n argo --watch https://raw.githubusercontent.com/argoproj/argo-work
 argo logs -n argo @latest
 
 # port forward argo ui
-kubectl -n argo port-forward service/argo-server 2746:2746
+ kubectl -n argo port-forward service/argo-server 2746:2746
 ======
 
 sudo apt update
