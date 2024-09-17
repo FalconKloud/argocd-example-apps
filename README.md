@@ -11,6 +11,8 @@ export PATH="/home/$(whoami)/.linuxbrew/bin:$PATH"
 source ~/.bashrc
 brew --version
 
+# k9s 
+https://k9scli.io/topics/install/
 
 # ArgoCD Example Apps
 
