@@ -1,6 +1,6 @@
 # k3d
 
-# Setup Spark
+# Setup Spark - Operator https://www.kubeflow.org/docs/components/spark-operator/getting-started/ 
 
 kubelow-spark-operator-app.yaml
 apiVersion: argoproj.io/v1alpha1
