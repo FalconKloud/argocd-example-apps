@@ -83,6 +83,9 @@ argo version
 
 Submit an app - https://argo-workflows.readthedocs.io/en/latest/quick-start/
 argo submit -n argo --watch https://raw.githubusercontent.com/argoproj/argo-workflows/main/examples/hello-world.yaml
+
+# See logs 
+argo logs -n argo @latest
 ======
 
 sudo apt update
