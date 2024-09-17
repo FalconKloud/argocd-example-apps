@@ -4,6 +4,14 @@ sudo passwd ubuntu
 # Install brew
 https://dikabrenda.medium.com/how-to-install-brew-on-ubuntu-20-04-lts-linux-714c73379dd4
 
+sudo apt update
+sudo apt install build-essential procps curl file git
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+export PATH="/home/$(whoami)/.linuxbrew/bin:$PATH"
+source ~/.bashrc
+brew --version
+
+
 # ArgoCD Example Apps
 
 This repository contains example applications for demoing ArgoCD functionality. Feel free
