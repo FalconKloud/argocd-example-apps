@@ -89,6 +89,16 @@ argo logs -n argo @latest
 
 # port forward argo ui
  kubectl -n argo port-forward service/argo-server 2746:2746
+
+
+ kubectl patch service argo-server \
+  --type=json \
+  -p='[
+    {"op": "replace", "path": "/spec/type", "value": "NodePort"},
+    {"op": "replace", "path": "/spec/ports/0/port", "value": 2746},
+    {"op": "replace", "path": "/spec/ports/0/targetPort", "value": 2746},
+    {"op": "replace", "path": "/spec/ports/0/nodePort", "value": 30000}
+  ]' -n argo
 ======
 
 sudo apt update
