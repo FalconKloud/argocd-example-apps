@@ -42,6 +42,15 @@ argocd app get kubelow-spark-operator
 chmod +x setup-spark-operator.sh
 ./setup-spark-operator.sh
 
+# Gitlab CI
+.gitlab-ci.yml
+stages:
+  - deploy
+
+deploy_spark_operator:
+  stage: deploy
+  script:
+    - ./setup-spark-operator.sh
 
 
 # Change user ubuntu password in ec2
