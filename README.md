@@ -1,3 +1,7 @@
+# change user ubuntu password in ec2
+sudo passwd ubuntu
+
+
 # ArgoCD Example Apps
 
 This repository contains example applications for demoing ArgoCD functionality. Feel free
